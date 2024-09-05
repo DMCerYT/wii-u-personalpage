@@ -62,7 +62,7 @@ body, html {
     transition: border 0.2s, border-bottom-width 0.2s, border-radius 0.2s, border-image 0.2s;
     border-radius: 3vh;
     text-align: center;
-    overflow: hidden;
+
 
     box-shadow: 
                 0 4px 8px rgba(0, 0, 0, 0.2), /* Outer shadow for depth */
