@@ -1,0 +1,107 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Container that maintains a 16:9 aspect ratio */
+.viewport-u {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: calc(100vw * 9 / 16);
+    max-height: 100vh;
+    transform: translate(-50%, -50%);
+    background-color: #ccc; /* Just for visual effect */
+}
+
+.about-me {
+    position: absolute;
+    height: 16vh;
+    width: 16vh;
+    background: green;
+    top: 4vh;
+    left: 4vh;
+    border-radius: 2.5vh;
+}
+
+.about-me a img{
+    position: relative;
+    top: 1vh;
+    left: 1vh;
+    height: 14vh;
+    width: 14vh;
+    border-radius: 2vh;
+}
+
+.icon-individual {
+    background: orange;
+    border-width: 0px;
+    margin: 20px;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 3vh;
+}
+
+.icon-individual:hover {
+    border-color: blue;
+    border-width: 10px;
+    animation: jiggle-icon-select 0.2s ease-in-out;
+    transform: scale(1.1) translateY(2px);
+}
+
+@keyframes jiggle-icon-select {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(5px) scale(0.95);
+    }
+    100% {
+        transform: translateY(2px) scale(1.1);
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    /* If the viewport is wider than 16:9, limit by height */
+    .viewport-u {
+        width: calc(100vh * 16 / 9);
+        height: 100vh;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    /* If the viewport is taller than 16:9, limit by width */
+    .viewport-u {
+        width: 100vw;
+        height: calc(100vw * 9 / 16);
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .icon-grid {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+}
+
+@media only screen and (min-width: 721px) {
+    .icon-grid {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 80%;
+        max-width: 125vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+}
+
