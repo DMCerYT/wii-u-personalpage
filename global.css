@@ -1,4 +1,5 @@
 body, html {
+    cursor: url(assets/cursors/cursor32.png), auto;
     margin: 0;
     height: 100%;
     overflow: hidden;
@@ -37,16 +38,23 @@ body, html {
 
 .icon-individual {
     background: orange;
-    border-width: 0px;
+    border: 0px solid rgba(0, 0, 255, 0);
+    box-sizing: border-box;
     margin: 20px;
     height: 20vh;
     width: 20vh;
     border-radius: 3vh;
+    transition: border 0.2s;
+}
+
+.icon-individual a img{
+    margin: 20px;
+    height: 16vh;
+    width: 16vh;
 }
 
 .icon-individual:hover {
-    border-color: blue;
-    border-width: 10px;
+    border: 20px solid rgba(0, 0, 255, 0.8);
     animation: jiggle-icon-select 0.2s ease-in-out;
     transform: scale(1.1) translateY(2px);
 }
