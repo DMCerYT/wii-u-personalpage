@@ -54,7 +54,7 @@ body, html {
     width: 20vh;
     border: 0px solid rgba(0, 0, 255, 0);
     transition: border 0.2s, border-bottom-width 0.2s;
-    border-radius: 22px;
+    border-radius: 40px;
     text-align: center;
 }
 
@@ -70,7 +70,7 @@ body, html {
 }
 
 .border-overlay:hover {
-    border: 24px solid rgba(0, 0, 255, 0.8);
+    border: 25px solid rgba(0, 0, 255, 0.8);
     animation: jiggle-icon-select 0.2s ease-in-out;
     border-bottom-width: 40px;
     transform: scale(1.1) translateY(0px);
