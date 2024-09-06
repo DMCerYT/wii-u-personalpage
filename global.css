@@ -17,6 +17,21 @@ body, html {
     background-color: #ccc; /* Just for visual effect */
 }
 
+.tempheader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+
+    border-radius: 30vh;
+    background:rgba(0, 0, 0, 0.3);
+
+    h1 {
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
 .about-me {
     position: absolute;
     height: 16vh;
@@ -56,10 +71,10 @@ body, html {
 .border-overlay {
     box-sizing: border-box;
     position: absolute;
-    height: 21vh;
+    height: 20vh;
     width: 20vh;
     border: 0px solid rgba(0, 145, 255, 0.4);
-    transition: border 0.2s, border-bottom-width 0.2s, border-radius 0.2s, border-image 0.2s;
+    transition: border 0.2s, border-bottom-width 0.2s, border-radius 0.2s, border-image 0.2s, height 0.2s;
     border-radius: 3vh;
     text-align: center;
 
@@ -84,6 +99,7 @@ body, html {
 .border-overlay:hover {
     border: 25px solid rgba(0, 145, 255, 0.4);
     animation: jiggle-icon-select 0.2s ease-in-out;
+    height: 22vh;
     border-bottom-width: 40px;
     transform: scale(1.1) translateY(0px);
     border-radius: 4vh;
@@ -101,14 +117,29 @@ body, html {
 
 .icon-individual a img{
     margin: 20px;
-    height: 16vh;
-    width: 16vh;
+    height: 15.8vh;
+    width: 15.8vh;
+    background: linear-gradient(rgba(255,255,255,0.2), rgba(240,240,240,0.2));
+    border-radius: 2vh;
+    overflow:hidden;
 }
 
 .icon-individual img{
     margin: 20px;
-    height: 16vh;
-    width: 16vh;
+    height: 15.8vh;
+    width: 15.8vh;
+    background: linear-gradient(rgba(255,255,255,0.2), rgba(240,240,240,0.2));
+    border-radius: 2vh;
+    overflow:hidden;
+}
+
+.app-icon-img {
+    margin: 20px;
+    height: 15.8vh;
+    width: 15.8vh;
+    background: linear-gradient(rgba(255,255,255,0.2), rgba(240,240,240,0.2));
+    border-radius: 2vh;
+    overflow:hidden;
 }
 
 .icon-individual:hover {
@@ -144,7 +175,7 @@ body, html {
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1079px) {
     .icon-grid {
         margin-left: auto;
         margin-right: auto;
@@ -152,10 +183,22 @@ body, html {
         display: flex;
         flex-wrap: wrap;
         align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .viewport-u {
+        position: relative;
+        width: 100vw;
+        height: calc(100vw * 9 / 16);
+        max-height: 100vh;
+        transform: translate(-50%, -50%);
+        background-color: #ccc; /* Just for visual effect */
     }
 }
 
-@media only screen and (min-width: 721px) {
+@media only screen and (min-width: 1080px) {
     .icon-grid {
         margin-top: auto;
         margin-bottom: auto;
@@ -167,6 +210,11 @@ body, html {
         display: flex;
         flex-wrap: wrap;
         align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
     }
+
+    
 }
 
